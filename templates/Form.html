@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-8 mx-auto">
+            <form  method="post">
+                <div class="form-floating mb-3">
+                  <input
+                    type="number"
+                    class="form-control" name="bedrooms" id="bedrooms" placeholder="Enter number of bedrooms">
+                  <label for="bedrooms">Number of Bedrooms</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="number"
+                    class="form-control" name="bathrooms" id="bathrooms" placeholder="Enter number of bathrooms">
+                  <label for="bathrooms">Number of Bathrooms</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script></script>
+{% endblock %}
