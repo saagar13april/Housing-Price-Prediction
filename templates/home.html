@@ -15,99 +15,117 @@
         href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
         rel="stylesheet" />
 <style>
-.mycard {
-            border: 2px solid black;
-            width: 25%;
-            border-radius: 5px;
-            box-shadow: 3px 2px 4px 1px rgba rgb(31, 29, 29) (0, 0, 0, 0.306), -2px -2px 2px -1px black;
-            background-color: rgb(238, 241, 244);
-            padding: 40px;
-            box-sizing: border-box;
-        }
+    h1 {
+      text-align: center;
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: linear-gradient(60deg, #e1ff005c, rgb(45, 39, 39)), url('https://www.allianzpnblife.ph/press/blog/8-tips-that-can-help-you-purchase-your-dream-house/_jcr_content/root/parsys/wrapper_copy/wrapper/image_copy.img.82.1280.jpeg/1612970597126/nov-blog4-2.jpeg');
-            backdrop-filter: blur(3px);
-             background-size: cover;
-        }
+    h3 {
+      text-align: center;
+    }
 
-        .myinput {
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: 1px solid rgb(137, 137, 137);
-        }
-       .myinput:hover{
-            outline: 1px solid rgb(180, 86, 180);
-       }
-       .myinput:focus{
-        outline: 1px solid black;
-       }
-        
-        .mybtn {
-            background-color: black;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            width: 100%;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 2px 2px 2px 1px #00000040;
-            font-family: roboto;
-            font-size: 15px;
-        }
+    .Bedrooms {
+      text-align: center;
+    }
 
-        .title,
-        .form-title {
-            text-align:Center;
-            /* font-family: Roboto; */
-        }
+    .Bathrooms {
+      text-align: center;
+    }
 
-        .title {
-            letter-spacing: 3px;
+    .living {
+      text-align: center;
+    }
 
-        }
+    .Above {
+      text-align: center;
+    }
 
-        * {
-            font-family: Roboto;
-        }
+    .Basement {
+      text-align: center;
+    }
 
+    .Grade {
+      text-align: center;
+    }
+
+    .View {
+      text-align: center;
+    }
+
+    .Latitude {
+      text-align: center;
+    }
+
+    .living15 {
+      text-align: center;
+    }
+
+    .mybutton {
+      text-align: center;
+    }
+
+    body {
+      background-image: url("https://lc.zoocdn.com/9f2d741927ffa878efa9a4ffa181dfcb119f7fc3.jpg");
+    }
 
 </style>
 </head>
 
 <body>
-    <div class="mycard">
-
-        <h2 class="title">House Price Prediction</h2>
-        <h3 class="form-title">Requirements Here</h3>
-
-        <label>Location</label>
-        <input type="text" class="myinput">
-
-        <label>Sqr ft</label>
-        <input type="Sqr ft" class="myinput">
-
-        <label>Floors</label>
-        <input type="Sqr ft" class="myinput">
-
-        <label>Number of Bedrooms</label>
-         <input type="number" id="bedrooms" name="bedrooms" min="0" max="10" step="1"><br><br>
-
-        <label>Number of Bathrooms</label>
-        <input type="number" id="bathrooms" name="bathrooms" min="0" max="10" step="1"><br><br>
-
-
-        <button class="mybtn">Predict</button>
-
+    <h1>HOUSE PRICE PREDICTON FORM</h1>
+<h3>User Requirements Here</h3>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-md-8 mx-auto">
+      <form method="post">
+        <div class="Bedrooms">
+          <label for="Bedrooms">Bedrooms</label>
+          <input type="number" class="Bedrooms" name="Bedrooms" id="Bedrooms" placeholder=" Enter Number of Bedrooms">
+        </div><br>
+        <div class=" Bathrooms">
+          <label for="bathrooms">Bathrooms</label>
+          <input type="number" class="form-control" name="bathrooms" id="bathrooms"
+            placeholder="Enter number of bathrooms">
+        </div><br>
+        <div class="living">
+          <label for="Square living">Square living</label>
+          <input type="number" class="form-control" name="Square livng" id="Square living"
+            placeholder="Enter number of Square living">
+        </div><br>
+        <div class="Above">
+          <label for="Square Above">Square Above</label>
+          <input type="number" class="Square Above" name="Square Above" id="Square Above"
+            placeholder="Enter the number of Square Above">
+        </div><br>
+        <div class="Basement">
+          <label for="Square Basement">Square Basement</label>
+          <input type="number" class="Square basement" name="Square Basement" id="Square Basement"
+            placeholder="Enter the number of Square Basement">
+        </div><br>
+        <div class="Grade">
+          <label for="Grade">Grade</label>
+          <input type="number" class="Grade" name="Grade" id="Grade" placeholder="Enter the number of Grade">
+        </div><br>
+        <div class="View">
+          <label for="View">View</label>
+          <input class="View" name="View" id="View" placeholder="Enter the number of View">
+        </div><br>
+        <div class="Latitude">
+          <label for="Latitude">Latitude</label>
+          <input class="Latitude" name="Latitude" id="Latitude" placeholder="Enter the number of Latitude"
+            type="Number">
+        </div><br>
+        <div class="living15">
+          <label for="Square living15">Square living15</label>
+          <input type="Number" class="Square living15" name="Square living15" id="Square living15"
+            placeholder="Enter the number Square living15">
+        </div><br>
+        <div class="mybutton">
+          <button class="mybtn">Predict</button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
 </body>
 {% endblock %}
 {% block body %}
