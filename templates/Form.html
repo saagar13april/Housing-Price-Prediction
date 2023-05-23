@@ -1,72 +1,75 @@
 {% extends 'base.html' %}
 
 {% block css %}
-  <style>
-    h1 {
-      text-align: center;
-    }
+<style>
+  h1 {
+    text-align: center;
+  }
 
-    h3 {
-      text-align: center;
-    }
+  h3 {
+    text-align: center;
+  }
 
-    .Bedrooms {
-      text-align: center;
-    }
+  .Bedrooms {
+    text-align: center;
+  }
 
-    .Bathrooms {
-      text-align: center;
-    }
+  .Bathrooms {
+    text-align: center;
+  }
 
-    .living {
-      text-align: center;
-    }
+  .living {
+    text-align: center;
+  }
 
-    .Above {
-      text-align: center;
-    }
+  .Above {
+    text-align: center;
+  }
 
-    .Basement {
-      text-align: center;
-    }
+  .Basement {
+    text-align: center;
+  }
 
-    .Grade {
-      text-align: center;
-    }
+  .Grade {
+    text-align: center;
+  }
 
-    .View {
-      text-align: center;
-    }
+  .View {
+    text-align: center;
+  }
 
-    .Latitude {
-      text-align: center;
-    }
+  .Latitude {
+    text-align: center;
+  }
 
-    .living15 {
-      text-align: center;
-    }
+  .living15 {
+    text-align: center;
+  }
 
-    .mybutton {
-      text-align: center;
-    }
+  .mybutton {
+    text-align: center;
+     
+  }
 
-    body {
-      background-image: url("https://lc.zoocdn.com/9f2d741927ffa878efa9a4ffa181dfcb119f7fc3.jpg");
-    }
-  </style>
+  body {
+    background-image: url("https://lc.zoocdn.com/9f2d741927ffa878efa9a4ffa181dfcb119f7fc3.jpg");
+  }
+</style>
 {% endblock %}
-{% block body %}
-<body>
+{% block content %}
+
 <h1>HOUSE PRICE PREDICTON FORM</h1>
 <h3>User Requirements Here</h3>
 <div class="container">
   <div class="row my-5">
     <div class="col-md-8 mx-auto">
       <form method="post">
-        <div class="Bedrooms">
-          <label for="Bedrooms">Bedrooms</label>
-          <input type="number" class="Bedrooms" name="Bedrooms" id="Bedrooms" placeholder=" Enter Number of Bedrooms">
-        </div><br>
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control" name="bedrooms" id="bedrooms" placeholder="Number of Bedroom">
+          <label for="bedrooms">No of Bedrooms</label>
+        </div>
         <div class=" Bathrooms">
           <label for="bathrooms">Bathrooms</label>
           <input type="number" class="form-control" name="bathrooms" id="bathrooms"
@@ -112,8 +115,7 @@
     </div>
   </div>
 </div>
-</body>
 {% endblock %}
-
 {% block js %}
+<script></script>
 {% endblock %}
