@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from flask import Flask, render_template, request, redirect , url_for , flash, jsonify
 from database import Entry, get_db
 import pandas as pd
 import plotly.express as px
@@ -26,7 +26,7 @@ def predict_price(df):
 app = Flask(__name__)
 
 def load_data():
-   df = pd.read_csv('dataset/house_pricing_dataset1.csv')
+   df = pd.read_csv('dataset/house_pricing_dataset.csv')
    return df
 
 @app.route('/')
@@ -36,6 +36,7 @@ def index():
 @app.route('/home',methods=['GET','POST'])
 def home():
     if request.method == 'POST':
+        print(request.form)
         bedrooms = request.form['bedrooms']
         bathrooms = request.form['bathrooms']
         sqft_living = request.form['sqft_living']
@@ -44,7 +45,7 @@ def home():
         sqft_above = request.form['sqft_above']
         sqft_basement = request.form['sqft_basement']
         lat = request.form['lat']
-        sqft_living15 = request.form[' sqft_living15']
+        sqft_living15 = request.form['sq15']
         df = create_df(bedrooms, bathrooms, sqft_living, view, grade, sqft_above, sqft_basement, lat, sqft_living15)
         price = predict_price(df)
         return render_template('home.html', price=price)
@@ -66,7 +67,7 @@ def graph_1():
    fig11 = px.scatter(df , x = 'price' , y='bathrooms' )
    fig12 = px.scatter(df , x = 'price' , y='sqft_living' )
    fig13 = px.scatter(df , x = 'price' , y='lat' )
-   fig14 = px.scatter(df , x = 'price' , y='sqft_living15' )
+   fig14 = px.scatter(df , x = 'price' , y='sq15' )
    return render_template('graph1.html',
                             fig1 = fig1.to_html(), 
                             fig2 = fig2.to_html(),
@@ -91,5 +92,5 @@ def graph_2():
         
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=8000, debug=True)
+  app.run(host='0.0.0.0', port=8000, debug=False)
  
